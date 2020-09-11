@@ -1,0 +1,16 @@
+{
+  "name": "portfolio2",
+  "version": "1.0.0",
+  "description": "Prologue by HTML5 UP\r html5up.net | @n33co\r Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)",
+  "main": "index.js",
+  "homepage": "https://alvislim.github.io/portfolio",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "gh-pages": "^3.1.0"
+  }
+}
