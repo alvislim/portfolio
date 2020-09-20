@@ -200,8 +200,8 @@
 		
 			.image img
 			{
-				display: block;
-				width: 100%;
+				width: 80%;
+				height: auto;
 			}
 			
 			.image.avatar48
@@ -213,8 +213,8 @@
 			
 				.image.avatar48 img
 				{
-					width: 48px;
-					height: 48px;
+					width: 100%;
+					height: auto;
 				}
 
 			.image.fit
@@ -808,4 +808,7 @@
 				font-weight: bold;
 			}
 
+			.imageWrapper {
+				margin-bottom: 2rem;
+			}
 
