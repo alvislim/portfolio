@@ -1,5 +1,5 @@
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
@@ -12,14 +12,17 @@
   --milky-white: #e9e9e7;
   --dark-grey: #262426;
   --orange-shade: #e79253;
+  --color: rgba(30, 30, 30);
+  --light-grey: #434143;
+  --bgColor: rgba(245, 245, 245);
 }
 
 body {
   margin: 0;
+  padding: 0;
   display: flex;
   place-items: center;
   min-width: 320px;
   height: 100%;
-  background-color: var(--dark-grey);
   overflow-x: hidden;
 }

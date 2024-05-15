@@ -1,7 +1,5 @@
 import { useRoutes, BrowserRouter } from "react-router-dom";
 import Landing from "@/Landing";
-import NavBar from "@/component/NavBar";
-import { NavBarTitle, items } from "@/constant";
 
 const App = () => {
   const element = useRoutes([
@@ -18,7 +16,6 @@ const App = () => {
 const AppWrapper = () => {
   return (
     <BrowserRouter>
-      <NavBar />;
       <App />
     </BrowserRouter>
   );

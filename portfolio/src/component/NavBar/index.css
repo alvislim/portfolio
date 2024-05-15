@@ -8,12 +8,11 @@
   background-color: var(--dark-grey);
   z-index: 1;
   justify-content: flex-end;
-  max-width: inherit;
+  /* gap: 2rem; */
+  /* box-shadow: 0 1px 0 rgba(231, 146, 83, 0.607); */
 }
 
 .navbar-container > .navbar-element {
-  margin: 0 2rem 0 2rem;
-  transition: 250ms ease;
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -24,9 +23,19 @@
   font-weight: 300;
   letter-spacing: 1.2px;
   color: var(--milky-white);
-  padding: 6px;
+  padding: 9px 18px;
+}
+
+.navbar-container > .navbar-element:hover {
+  transition: 250ms ease;
+  color: var(--orange-shade);
 }
 
 .navbar-container > .navbar-element > img {
   padding-right: 5px;
+}
+
+.navbar-container > .active {
+  font-weight: 700;
+  color: var(--orange-shade);
 }

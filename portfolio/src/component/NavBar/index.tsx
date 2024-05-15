@@ -1,26 +1,14 @@
 import { motion } from "framer-motion";
 import "./index.css";
-import { NavBarTitle, items } from "@/constant";
-// import about from "@/assets/icon/about.svg";
-// import work from "@/assets/icon/work.svg";
-// import projects from "@/assets/icon/projects.svg";
+import { NavBarItems } from "@/constant";
+import { Link } from "react-scroll";
 
 type Props = {
-  currViewPort?: NavBarTitle;
+  navBarArr: NavBarItems[];
 };
 
 const NavBar = (props: Props) => {
-  const { currViewPort } = props;
-
-  // const getLogo = (title: string): JSX.Element => {
-  //   if (title === "About") {
-  //     return <img src={about} />;
-  //   } else if (title === "Projects") {
-  //     return <img src={projects} />;
-  //   } else {
-  //     return <img src={work} />;
-  //   }
-  // };
+  const { navBarArr } = props;
 
   return (
     <motion.div
@@ -37,23 +25,20 @@ const NavBar = (props: Props) => {
         duration: 1,
         ease: [0.6, 0.05, 0.01, 0.9],
       }}>
-      {items.map((item, indx) => {
+      {navBarArr.map((item, indx) => {
         return (
-          <motion.button
+          <Link
             className='navbar-element'
-            key={`${item}${indx}`}
-            whileHover={{
-              scale: 1.1,
-              color: "#e79253",
-            }}
-            whileTap={{ scale: 0.95 }}
-            transition={{
-              duration: 0,
-              easings: 0.25,
-            }}>
-            {/* {getLogo(item)} */}
-            {item}
-          </motion.button>
+            activeClass='active'
+            to={item.id}
+            isDynamic={true}
+            spy={true}
+            offset={-70}
+            duration={1000}
+            smooth={"easeInOutQuint"}
+            key={`${item}_${indx}`}>
+            {item.title}
+          </Link>
         );
       })}
     </motion.div>
