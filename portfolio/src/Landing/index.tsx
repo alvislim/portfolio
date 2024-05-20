@@ -32,12 +32,12 @@ const Landing = () => {
           <ProfileDesc />
           <Skills />
         </motion.section>
-        <section className={`section h-100`} id='experience'>
+        <div className={`section h-100`} id='experience'>
           <Experience />
-        </section>
-        <section className={`section h-100`} id='experience'>
+        </div>
+        <div className={`section h-100`} id='experience'>
           <Projects />
-        </section>
+        </div>
       </div>
     </>
   );

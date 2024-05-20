@@ -3,9 +3,9 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-width: 680px;
   background-color: var(--dark-grey);
   position: relative;
+  width: 100%;
 }
 
 .section {
