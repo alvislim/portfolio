@@ -1,4 +1,3 @@
-import ProfileDesc from "./About/ProfileDesc";
 import "./index.css";
 import Experience from "@/Landing/Experience";
 
