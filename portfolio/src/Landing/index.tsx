@@ -5,8 +5,8 @@ import Experience from "@/Landing/Experience";
 import { motion } from "framer-motion";
 import NavBar from "@/component/NavBar";
 import { navBarItems } from "@/constant";
-import Skills from "@/Landing/About/Skills";
 import Projects from "./Projects";
+import About from "./About";
 
 const Landing = () => {
   return (
@@ -29,8 +29,7 @@ const Landing = () => {
             duration: 1,
             ease: [0.6, 0.05, 0.01, 0.9],
           }}>
-          <ProfileDesc />
-          <Skills />
+          <About />
         </motion.section>
         <div className={`section h-100`} id='experience'>
           <Experience />

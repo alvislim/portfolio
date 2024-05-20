@@ -26,6 +26,16 @@ const ProfileDesc = () => {
         <p>based in Singapore📍</p>
       </div>
       <img src={profilePic} className='profile-img' alt='profile pic' />
+      <div className='about-desc'>
+        <p className='title'>About</p>
+        <p className='desc'>
+          <span /> A full stack web developer with more than 3 years of Test
+          Analyst experience in FINTECH and 3 years of front-end web development
+          experience in Insurance and Banking domain. As a Software Developer, I
+          work well under pressure and have come to enjoy working in fast paced
+          environment while building interactive User Interface.
+        </p>
+      </div>
     </div>
   );
 };

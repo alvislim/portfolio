@@ -6,6 +6,8 @@
   gap: 2rem;
   opacity: 1;
   width: 100%;
+  flex-direction: column;
+
   /* background-color: var(--dark-grey); */
 }
 
@@ -13,6 +15,26 @@
   .content-wrapper {
     flex-direction: column;
   }
+}
+
+.content-wrapper > .about-desc {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+}
+
+.content-wrapper > .about-desc > .title {
+  font-size: 2.2rem;
+  font-weight: 600;
+  letter-spacing: 1.2px;
+  line-height: 48px;
+  color: var(--milky-white);
+  margin: 0;
+}
+
+.content-wrapper > .about-desc > .desc {
+  color: var(--milky-white);
+  width: auto;
 }
 
 .profile-img {
@@ -71,7 +93,7 @@
   font-weight: 700;
   letter-spacing: 1.2px;
   color: var(--milky-white);
-  line-height: 32px;
+  /* line-height: 32px; */
 }
 
 .text-wrapper > p:nth-child(3) {
@@ -96,5 +118,5 @@
   transform-origin: 70% 70%;
   display: inline-block;
   position: absolute;
-  bottom: 0.3rem;
+  top: 2.5rem;
 }

@@ -1,6 +1,7 @@
 import ImageCard from "@/Landing/Projects/ImgCard";
 import "./index.css";
 import { projectArr } from "@/constant";
+import { isMobile } from "react-device-detect";
 
 const Projects = () => {
   return (
@@ -16,6 +17,7 @@ const Projects = () => {
               githubFE={project.githubFE}
               githubBE={project.githubBE}
               demo={project.demo}
+              isMobile={isMobile}
             />
           );
         })}

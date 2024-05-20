@@ -43,5 +43,23 @@
 .text {
   color: var(--milky-white);
   font-size: 1rem;
-  padding: 16px 32px;
+  padding: 0 5px;
+}
+
+.mobile-cta {
+  display: flex;
+  flex-direction: column;
+  padding-top: 10px;
+}
+
+.mobile-cta > a {
+  text-decoration: none;
+  color: var(--orange-shade);
+  font-weight: 500;
+}
+
+.middle > a {
+  text-decoration: none;
+  color: var(--orange-shade);
+  font-weight: 500;
 }

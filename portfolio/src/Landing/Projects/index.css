@@ -16,4 +16,8 @@
 .project-wrapper {
   display: flex;
   gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-flow: column;
+  align-items: center;
 }
