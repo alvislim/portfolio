@@ -1,5 +1,9 @@
 import { work, projects, about } from "@/constant/logo";
 
+import taskTracker from "@/assets/image/taskTracker.png";
+import weatherTracker from "@/assets/image/weatherApp.png";
+import urlShorterner from "@/assets/image/urlShortener.png";
+
 export type NavBarTitle = "About" | "Professional Experience" | "Projects";
 
 export type ProfessionalExpObj = {
@@ -65,5 +69,36 @@ export const professionalExperience: ProfessionalExpObj[] = [
       "• Drafted test plan for each sprint and release.",
     ],
     year: "2017 - 2020",
+  },
+];
+
+type ProjectArr = {
+  img: string;
+  demo: string;
+  githubFE: string;
+  githubBE: string;
+  desc: string;
+};
+export const projectArr: ProjectArr[] = [
+  {
+    img: urlShorterner,
+    demo: "https://url-shortener-fe-ten.vercel.app/",
+    githubFE: "https://github.com/alvislim/UrlShortenerFE",
+    githubBE: "https://github.com/alvislim/UrlShortenerBE",
+    desc: "A simple and fast URL Shortener. With integrated backend and cache to allow more meaningful user experience.",
+  },
+  {
+    img: weatherTracker,
+    demo: "https://65f00c9314f07b8859056f59--subtle-begonia-5d4e32.netlify.app/",
+    githubBE: "",
+    githubFE: "https://github.com/alvislim/WeatherTracker",
+    desc: "A working application that allows user to track the weather information of certain countries, while caching the search history with the ability to delete, or search.",
+  },
+  {
+    img: taskTracker,
+    demo: "https://65c06c9599ee79e7047e992c--stupendous-queijadas-e8a7d2.netlify.app/",
+    githubFE: "https://github.com/alvislim/task-tracker",
+    githubBE: "",
+    desc: "A simple task tracker which allows you to create tasks and epics. Uses  zustand as state management and zustand router for routing. Work in progress..",
   },
 ];

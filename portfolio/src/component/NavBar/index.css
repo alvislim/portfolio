@@ -8,8 +8,7 @@
   background-color: var(--dark-grey);
   z-index: 1;
   justify-content: flex-end;
-  /* gap: 2rem; */
-  /* box-shadow: 0 1px 0 rgba(231, 146, 83, 0.607); */
+  box-shadow: 0 5px 10px -2px rgba(231, 146, 83, 40%);
 }
 
 .navbar-container > .navbar-element {

@@ -70,7 +70,7 @@
   font-size: 2.2rem;
   font-weight: 700;
   letter-spacing: 1.2px;
-  color: var(--white);
+  color: var(--milky-white);
   line-height: 32px;
 }
 
@@ -86,7 +86,7 @@
   font-size: 1.9rem;
   font-weight: 600;
   letter-spacing: 1.2px;
-  color: var(--white);
+  color: var(--milky-white);
   margin-top: 0.8rem;
   line-height: 32px;
 }

@@ -1,5 +1,4 @@
 import { ProfessionalExpObj } from "@/constant";
-import "@/experience/index.css";
 import "./index.css";
 import { useInView } from "framer-motion";
 import { useRef } from "react";

@@ -1,6 +1,6 @@
 import "./index.css";
 import { professionalExperience } from "@/constant";
-import Content from "@/experience/Content";
+import Content from "@/Landing/Experience/Content";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 

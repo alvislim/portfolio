@@ -1,10 +1,12 @@
-import ProfileDesc from "../About/ProfileDesc";
+import ProfileDesc from "./About/ProfileDesc";
 import "./index.css";
-import Experience from "@/experience";
-import Skills from "@/About/skills";
+import Experience from "@/Landing/Experience";
+
 import { motion } from "framer-motion";
 import NavBar from "@/component/NavBar";
 import { navBarItems } from "@/constant";
+import Skills from "@/Landing/About/Skills";
+import Projects from "./Projects";
 
 const Landing = () => {
   return (
@@ -32,6 +34,9 @@ const Landing = () => {
         </motion.section>
         <section className={`section h-100`} id='experience'>
           <Experience />
+        </section>
+        <section className={`section h-100`} id='experience'>
+          <Projects />
         </section>
       </div>
     </>
