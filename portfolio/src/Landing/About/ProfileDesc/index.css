@@ -6,14 +6,34 @@
   gap: 2rem;
   opacity: 1;
   width: 100%;
-  flex-direction: column;
 
   /* background-color: var(--dark-grey); */
 }
 
 @media screen and (max-width: 600px) {
   .content-wrapper {
-    flex-direction: column;
+    flex-direction: column-reverse;
+    gap: 1rem;
+  }
+
+  .content-desc > .text-wrapper > p:nth-child(2) {
+    font-size: 2rem;
+    font-weight: 700;
+  }
+
+  .content-desc > .text-wrapper > p:nth-child(3) {
+    font-size: 2rem;
+    font-weight: 700;
+  }
+
+  .content-desc > .text-wrapper > p:nth-child(4) {
+    font-size: 1.3rem;
+    font-weight: 600;
+  }
+
+  .content-wrapper > .profile-img {
+    height: 44vh;
+    width: 40vh;
   }
 }
 
@@ -23,18 +43,32 @@
   width: 80%;
 }
 
-.content-wrapper > .about-desc > .title {
+.content-wrapper > .text-wrapper {
+  width: 80%;
+}
+
+/* .content-wrapper > .content-desc > .about-desc > .title {
   font-size: 2.2rem;
   font-weight: 600;
   letter-spacing: 1.2px;
   line-height: 48px;
   color: var(--milky-white);
-  margin: 0;
+} */
+.content-wrapper > .content-desc {
+  width: 50%;
 }
 
-.content-wrapper > .about-desc > .desc {
+@media screen and (max-width: 600px) {
+  .content-wrapper > .content-desc {
+    width: 80%;
+  }
+}
+
+.content-wrapper > .content-desc > .about-desc > .desc {
   color: var(--milky-white);
   width: auto;
+  font-style: oblique;
+  padding-top: 2rem;
 }
 
 .profile-img {
@@ -45,28 +79,6 @@
   width: 100%;
   min-width: 20px;
   box-shadow: 0 0.5rem 1rem rgba(58, 56, 56, 0.607);
-}
-
-@media screen and (max-width: 600px) {
-  .content-wrapper > .text-wrapper > p:nth-child(2) {
-    font-size: 1.9rem;
-    font-weight: 700;
-  }
-
-  .content-wrapper > .text-wrapper > p:nth-child(3) {
-    font-size: 1.9rem;
-    font-weight: 700;
-  }
-
-  .content-wrapper > .text-wrapper > p:nth-child(4) {
-    font-size: 1.2rem;
-    font-weight: 600;
-  }
-
-  .content-wrapper > .profile-img {
-    height: 44vh;
-    width: 40vh;
-  }
 }
 
 .text-wrapper > p {
@@ -85,7 +97,6 @@
   letter-spacing: 2px;
   color: var(--milky-white);
   position: relative;
-  line-height: 32px;
 }
 
 .text-wrapper > p:nth-child(2) {
@@ -93,7 +104,6 @@
   font-weight: 700;
   letter-spacing: 1.2px;
   color: var(--milky-white);
-  /* line-height: 32px; */
 }
 
 .text-wrapper > p:nth-child(3) {
@@ -114,9 +124,9 @@
 }
 
 .wave {
-  font-size: 2.4rem;
+  font-size: 2.1rem;
   transform-origin: 70% 70%;
   display: inline-block;
   position: absolute;
-  top: 2.5rem;
+  top: -1.2rem;
 }

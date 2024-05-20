@@ -102,6 +102,7 @@ ul li .descr {
   color: var(--milky-white);
   height: max-content;
   padding-top: 1rem;
+  font-style: oblique;
 }
 ul li .title {
   overflow: hidden;

@@ -29,6 +29,8 @@ body {
   justify-content: center;
 }
 
-html {
-  overflow-x: hidden;
+@media screen and (max-width: 600px) {
+  html {
+    overflow-x: hidden;
+  }
 }
