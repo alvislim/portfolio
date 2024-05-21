@@ -33,7 +33,7 @@ const Landing = () => {
         <div className={`section h-100`} id='experience'>
           <Experience />
         </div>
-        <div className={`section h-100`} id='experience'>
+        <div className={`section h-100`} id='projects'>
           <Projects />
         </div>
       </div>

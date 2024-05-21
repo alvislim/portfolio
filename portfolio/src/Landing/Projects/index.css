@@ -1,6 +1,6 @@
 .project-container {
   width: 100%;
-  height: 100%;
+  height: 100vh;
   max-width: 980px;
   margin-block-end: 2rem;
 }
@@ -8,7 +8,7 @@
 .project-container > .title {
   color: var(--milky-white);
   font-weight: 700;
-  font-size: 2.5rem;
+  font-size: 2.2rem;
   letter-spacing: 1.2px;
   margin-bottom: 2rem;
 }
@@ -18,6 +18,15 @@
   gap: 1rem;
   flex-wrap: wrap;
   justify-content: center;
-  flex-flow: column;
+  flex-flow: row;
   align-items: center;
+}
+
+@media screen and (max-width: 600px) {
+  .project-wrapper {
+    flex-direction: column;
+  }
+  .project-container {
+    height: 100%;
+  }
 }

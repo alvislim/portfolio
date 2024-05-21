@@ -8,7 +8,7 @@
 .experience-container > p {
   color: var(--milky-white);
   font-weight: 700;
-  font-size: 2.5rem;
+  font-size: 2.2rem;
   letter-spacing: 1.2px;
-  margin-bottom: 2rem;
+  margin: 0 0 2rem 0;
 }

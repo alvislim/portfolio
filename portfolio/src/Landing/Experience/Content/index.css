@@ -14,6 +14,7 @@ ul {
 @media screen and (max-width: 600px) {
   ul {
     width: 90%;
+    padding: 0 0 0 15px;
   }
 }
 
@@ -75,7 +76,7 @@ ul li .date::before {
   position: absolute;
   top: 100%;
 
-  clip-path: polygon(0 0, 100% 0, 0 100%);
+  clip-path: polygon(0 0, 90% 0, 0 90%);
   right: 0;
 }
 
@@ -83,7 +84,7 @@ ul li .date::before {
 ul li .date::after {
   content: "";
   position: absolute;
-  width: 2rem;
+  width: 1.5rem;
   aspect-ratio: 1;
   background: rgb(58, 56, 56);
   border: 0.3rem solid var(--orange-shade);
@@ -98,7 +99,7 @@ ul li .date::after {
 ul li .title,
 ul li .descr {
   position: relative;
-  padding-inline: 1.5rem;
+  /* padding-inline: 0.1rem; */
   color: var(--milky-white);
   height: max-content;
   padding-top: 1rem;
@@ -127,7 +128,7 @@ ul li .title::before,
 ul li .descr::before {
   content: "";
   position: absolute;
-  width: 90%;
+  width: 95%;
   height: 0.2rem;
   background: var(--orange-shade);
   left: 50%;
