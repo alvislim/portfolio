@@ -24,13 +24,13 @@ body {
   place-items: center;
   min-width: 320px;
   height: 100%;
-  overflow-x: hidden;
+  overflow-x: clip;
   width: 100%;
   justify-content: center;
 }
 
 @media screen and (max-width: 600px) {
   html {
-    overflow-x: hidden;
+    overflow-x: clip;
   }
 }
