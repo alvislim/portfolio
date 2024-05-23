@@ -1,4 +1,4 @@
-ul {
+.experience-container > ul {
   --col-gap: 2rem;
   --row-gap: 2rem;
   --line-w: 0.25rem;
@@ -12,14 +12,14 @@ ul {
 }
 
 @media screen and (max-width: 600px) {
-  ul {
+  .experience-container > ul {
     width: 90%;
     padding: 0 0 0 15px;
   }
 }
 
 /* line */
-ul::before {
+.experience-container > ul::before {
   content: "";
   grid-column: 1;
   width: 2px;
@@ -31,7 +31,7 @@ ul::before {
 /* columns*/
 
 /* row gaps */
-ul li:not(:last-child) {
+.experience-container > ul li:not(:last-child) {
   margin-bottom: var(--row-gap);
 }
 
@@ -40,7 +40,7 @@ ul li:not(:last-child) {
 } */
 
 /* card */
-ul li {
+.experience-container > ul li {
   grid-column: 2;
   --inlineP: 1.5rem;
   margin-inline: var(--inlineP);
@@ -50,7 +50,7 @@ ul li {
 }
 
 /* date */
-ul li .date {
+.experience-container > ul li .date {
   --dateH: 3rem;
   height: var(--dateH);
   margin-inline: calc(var(--inlineP) * -1);
@@ -67,7 +67,7 @@ ul li .date {
 }
 
 /* date flap */
-ul li .date::before {
+.experience-container > ul li .date::before {
   content: "";
   width: var(--inlineP);
   aspect-ratio: 1;
@@ -81,7 +81,7 @@ ul li .date::before {
 }
 
 /* circle */
-ul li .date::after {
+.experience-container > ul li .date::after {
   content: "";
   position: absolute;
   width: 1.5rem;
@@ -96,7 +96,7 @@ ul li .date::after {
 }
 
 /* title descr */
-ul li .title,
+.experience-container > ul li .title,
 ul li .descr {
   position: relative;
   /* padding-inline: 0.1rem; */
@@ -105,18 +105,18 @@ ul li .descr {
   padding-top: 1rem;
   font-style: oblique;
 }
-ul li .title {
+.experience-container > ul li .title {
   overflow: hidden;
   padding-block-start: 1.5rem;
   padding-block-end: 1rem;
   font-weight: 500;
 }
-ul li .descr {
+.experience-container > ul li .descr {
   padding-block-end: 1.5rem;
   font-weight: 300;
 }
 
-ul li .descr p {
+.experience-container > ul li .descr p {
   margin: 0;
   letter-spacing: 0.7px;
   line-height: 29px;
@@ -124,7 +124,7 @@ ul li .descr p {
 }
 
 /* shadows */
-ul li .title::before,
+.experience-container > ul li .title::before,
 ul li .descr::before {
   content: "";
   position: absolute;
@@ -136,44 +136,44 @@ ul li .descr::before {
   filter: blur(3px);
   transform: translate(-50%, 50%);
 }
-ul li .title::before {
+.experience-container > ul li .title::before {
   bottom: calc(100% + 0.125rem);
 }
 
-ul li .descr::before {
+.experience-container > ul li .descr::before {
   z-index: -1;
   bottom: 0.25rem;
 }
 
 @media (min-width: 40rem) {
-  ul {
+  .experience-container > ul {
     grid-template-columns: 1fr var(--line-w) 1fr;
   }
-  ul::before {
+  .experience-container > ul::before {
     grid-column: 2;
   }
-  ul li:nth-child(odd) {
+  .experience-container > ul li:nth-child(odd) {
     grid-column: 1;
   }
-  ul li:nth-child(even) {
+  .experience-container > ul li:nth-child(even) {
     grid-column: 3;
   }
 
   /* start second card */
-  ul li:nth-child(2) {
+  .experience-container > ul li:nth-child(2) {
     grid-row: 2/4;
   }
 
-  ul li:nth-child(odd) .date::before {
+  .experience-container > ul li:nth-child(odd) .date::before {
     clip-path: polygon(0 0, 100% 0, 100% 100%);
     left: 0;
   }
 
-  ul li:nth-child(odd) .date::after {
+  .experience-container > ul li:nth-child(odd) .date::after {
     transform: translate(-50%, -50%);
     left: calc(100% + var(--col-gap) + var(--line-w) / 2);
   }
-  ul li:nth-child(odd) .date {
+  .experience-container > ul li:nth-child(odd) .date {
     border-radius: 0 calc(var(--dateH) / 2) calc(var(--dateH) / 2) 0;
   }
 }
