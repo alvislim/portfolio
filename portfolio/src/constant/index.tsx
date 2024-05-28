@@ -5,7 +5,7 @@ import weatherTracker from "@/assets/image/weatherApp.png";
 import urlShorterner from "@/assets/image/urlShortener.png";
 import pomodoro from "@/assets/image/pomodoro.png";
 
-export type NavBarTitle = "About" | "Professional Experience" | "Projects";
+export type NavBarTitle = "About" | "Experience" | "Projects";
 
 export type ProfessionalExpObj = {
   title: string;
@@ -22,7 +22,7 @@ export type NavBarItems = {
 
 export const navBarItems: NavBarItems[] = [
   { title: "About", logo: about, id: "about" },
-  { title: "Professional Experience", logo: work, id: "experience" },
+  { title: "Experience", logo: work, id: "experience" },
   { title: "Projects", logo: projects, id: "projects" },
 ];
 
