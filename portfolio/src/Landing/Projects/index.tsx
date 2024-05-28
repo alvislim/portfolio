@@ -28,7 +28,6 @@ const Projects = () => {
               githubFE={project.githubFE}
               githubBE={project.githubBE}
               demo={project.demo}
-              isMobile={isMobile}
             />
           );
         })}

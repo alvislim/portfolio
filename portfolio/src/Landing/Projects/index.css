@@ -19,7 +19,7 @@
   flex-wrap: wrap;
   justify-content: center;
   flex-flow: row;
-  align-items: center;
+  align-items: flex-start;
 }
 
 @media screen and (max-width: 600px) {
