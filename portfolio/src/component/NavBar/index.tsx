@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import "./index.css";
 import { NavBarItems } from "@/constant";
 import { Link } from "react-scroll";
+import { useState } from "react";
 
 type Props = {
   navBarArr: NavBarItems[];
@@ -9,56 +10,40 @@ type Props = {
 
 const NavBar = (props: Props) => {
   const { navBarArr } = props;
+  const [showSideBar, setShowSideBar] = useState<boolean>(false);
 
-  return (
-    <motion.nav
-      className='navbar-container'
-      initial={{
-        opacity: 0,
-        y: -100,
-      }}
-      animate={{
-        opacity: 1,
-        y: 0,
-      }}
-      transition={{
-        duration: 1,
-        ease: [0.6, 0.05, 0.01, 0.9],
-      }}>
+  const onClickSideBar = () => {
+    console.log("hey");
+    setShowSideBar(!showSideBar);
+  };
+
+  const NavBar = () => {
+    return (
       <ul>
-        <li>
-          <Link
-            className='navbar-element'
-            activeClass='active'
-            to={""}
-            isDynamic={true}
-            spy={true}
-            offset={-70}
-            duration={1000}
-            smooth={"easeInOutQuint"}>
-            Download Resume
-          </Link>
+        <li key='download'>
+          <button className='navbar-element'>Download Resume</button>
         </li>
         {navBarArr.map((item, indx) => {
           return (
-            <li>
+            <li key={`${item}_${indx}`}>
               <Link
                 className='navbar-element'
                 activeClass='active'
+                key={`${item}_${indx}`}
                 to={item.id}
                 isDynamic={true}
                 spy={true}
                 offset={-70}
                 duration={1000}
-                smooth={"easeInOutQuint"}
-                key={`${item}_${indx}`}>
+                smooth={"easeInOutQuint"}>
                 {item.title}
               </Link>
             </li>
           );
         })}
-        <li>
+        <li key='hamburger-menu'>
           <input
+            onClick={onClickSideBar}
             type='checkbox'
             id='checkbox4'
             className='checkbox4 visuallyHidden'
@@ -74,7 +59,39 @@ const NavBar = (props: Props) => {
           </label>
         </li>
       </ul>
-    </motion.nav>
+    );
+  };
+
+  return (
+    <>
+      <motion.nav
+        className='navbar-container'
+        initial={{
+          opacity: 0,
+          y: -100,
+        }}
+        animate={{
+          opacity: 1,
+          y: 0,
+        }}
+        transition={{
+          duration: 1,
+          ease: [0.6, 0.05, 0.01, 0.9],
+        }}>
+        {NavBar()}
+      </motion.nav>
+
+      <div
+        className='sidebar-container'
+        style={{
+          transform: showSideBar ? "translateX(0)" : "translateX(200px)",
+          opacity: showSideBar ? 1 : 0,
+          animationDuration: "0.4",
+          transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
+        }}>
+        {NavBar()}
+      </div>
+    </>
   );
 };
 
