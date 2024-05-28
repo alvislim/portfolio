@@ -3,6 +3,7 @@ import { work, projects, about } from "@/constant/logo";
 import taskTracker from "@/assets/image/taskTracker.png";
 import weatherTracker from "@/assets/image/weatherApp.png";
 import urlShorterner from "@/assets/image/urlShortener.png";
+import pomodoro from "@/assets/image/pomodoro.png";
 
 export type NavBarTitle = "About" | "Professional Experience" | "Projects";
 
@@ -86,6 +87,13 @@ export const projectArr: ProjectArr[] = [
     githubFE: "https://github.com/alvislim/UrlShortenerFE",
     githubBE: "https://github.com/alvislim/UrlShortenerBE",
     desc: "A simple and fast URL Shortener. With integrated backend and cache to allow more meaningful user experience.",
+  },
+  {
+    img: pomodoro,
+    demo: "https://pomodoro-one-xi.vercel.app/",
+    githubBE: "",
+    githubFE: "https://github.com/alvislim/pomodoro/tree/main/pomodoro-timer",
+    desc: "A Pomodoro timer application built with next JS as base and chakra UI for the design.",
   },
   {
     img: weatherTracker,

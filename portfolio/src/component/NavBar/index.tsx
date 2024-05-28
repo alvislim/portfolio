@@ -3,6 +3,7 @@ import "./index.css";
 import { NavBarItems } from "@/constant";
 import { Link } from "react-scroll";
 import { useState } from "react";
+import resume from "@/assets/pdf/resume.pdf";
 
 type Props = {
   navBarArr: NavBarItems[];
@@ -16,11 +17,20 @@ const NavBar = (props: Props) => {
     setShowSideBar(!showSideBar);
   };
 
+  const onDownloadResume = () => {
+    window.open(resume);
+  };
+
   const NavBar = (sideBar: boolean): JSX.Element => {
     return (
       <ul>
         <li key='download'>
-          <button className='navbar-element'>Download Resume</button>
+          <button
+            className='navbar-element'
+            type='submit'
+            onClick={onDownloadResume}>
+            Download Resume
+          </button>
         </li>
         {navBarArr.map((item, indx) => {
           return (

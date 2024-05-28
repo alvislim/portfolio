@@ -1,7 +1,6 @@
 import ImageCard from "@/Landing/Projects/ImgCard";
 import "./index.css";
 import { projectArr } from "@/constant";
-import { isMobile } from "react-device-detect";
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 
