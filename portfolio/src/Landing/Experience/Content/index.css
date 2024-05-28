@@ -14,7 +14,7 @@
 @media screen and (max-width: 600px) {
   .experience-container > ul {
     width: 85%;
-    padding: 0 0 0 15px;
+    padding: 0 1rem 0 2rem;
   }
 }
 
