@@ -43,7 +43,7 @@ const NavBar = (props: Props) => {
         })}
         <li key='hamburger-menu'>
           <input
-            onClick={onClickSideBar}
+            onChange={onClickSideBar}
             type='checkbox'
             id='checkbox4'
             className='checkbox4 visuallyHidden'

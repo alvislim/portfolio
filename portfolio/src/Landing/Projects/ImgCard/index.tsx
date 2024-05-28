@@ -41,7 +41,11 @@ const ImageCard = (props: Props) => {
           <a href={githubFE} target='_blank'>
             {githubTitle}
           </a>
-          {githubBE ? <a href={githubFE}>Source Code BE</a> : null}
+          {githubBE ? (
+            <a href={githubFE} target='_blank'>
+              Source Code BE
+            </a>
+          ) : null}
         </div>
       ) : null}
     </>
