@@ -1,5 +1,5 @@
 .experience-container > ul {
-  --col-gap: 2rem;
+  --col-gap: 1rem;
   --row-gap: 2rem;
   --line-w: 0.25rem;
   display: grid;
