@@ -13,11 +13,10 @@ const NavBar = (props: Props) => {
   const [showSideBar, setShowSideBar] = useState<boolean>(false);
 
   const onClickSideBar = () => {
-    console.log("hey");
     setShowSideBar(!showSideBar);
   };
 
-  const NavBar = () => {
+  const NavBar = (sideBar: boolean): JSX.Element => {
     return (
       <ul>
         <li key='download'>
@@ -35,7 +34,8 @@ const NavBar = (props: Props) => {
                 spy={true}
                 offset={-70}
                 duration={1000}
-                smooth={"easeInOutQuint"}>
+                smooth={"easeInOutQuint"}
+                onClick={sideBar ? onClickSideBar : undefined}>
                 {item.title}
               </Link>
             </li>
@@ -47,6 +47,7 @@ const NavBar = (props: Props) => {
             type='checkbox'
             id='checkbox4'
             className='checkbox4 visuallyHidden'
+            checked={showSideBar}
           />
           <label htmlFor='checkbox4'>
             <div className='hamburger hamburger4'>
@@ -78,7 +79,7 @@ const NavBar = (props: Props) => {
           duration: 1,
           ease: [0.6, 0.05, 0.01, 0.9],
         }}>
-        {NavBar()}
+        {NavBar(false)}
       </motion.nav>
 
       <div
@@ -89,7 +90,7 @@ const NavBar = (props: Props) => {
           animationDuration: "0.4",
           transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
         }}>
-        {NavBar()}
+        {NavBar(true)}
       </div>
     </>
   );

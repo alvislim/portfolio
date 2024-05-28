@@ -70,6 +70,10 @@
   .navbar-element {
     padding: 0;
   }
+
+  .sidebar-container > ul > li:first-child {
+    display: none;
+  }
 }
 
 .hamburger {
